@@ -1,0 +1,154 @@
+:root{
+  --main-color:rgba(0, 0, 0, 0.753);
+  --cheese-color:rgba(255, 255, 0, 0.789);
+  --bread-color:burlywood;
+  --meat-color:brown;
+  --tomato-color:rgba(208, 25, 61, 0.73);
+}
+
+
+body{
+  background-color: var(--main-color);
+  overflow: hidden;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  width: 70%;
+  margin: auto;
+  max-width: 500px;
+}
+
+.scroll-bar{
+  max-height: 50vh;
+  overflow: auto;
+}
+
+.inner-grid{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.cheez{
+  color: white;
+  padding: 3px;
+  width: 100%;
+  background-color: var(--cheese-color);
+  border-radius: 50px;
+  position: relative;
+}
+
+
+.bread-top{
+  height: 60px;
+  background-color: var(--bread-color);
+  border-radius:50px 50px 0 0 ;
+  margin: 10px;
+  text-align: center;
+}
+
+.bread-bottom{
+  height: 60px;
+  background-color: var(--bread-color);
+  border-radius:0 0 50px 50px;
+  margin: 10px;
+}
+
+
+
+.meat{
+  height: 20px;
+  border-radius: 50px;
+  background-color: var(--meat-color);
+  padding: 10px;
+  width: 100%;
+}
+
+.tomato{
+  height: 5px;
+  border-radius: 50px;
+  background-color: var(--tomato-color);
+  padding: 5px;
+  width: 30%;
+  margin: auto;
+}
+
+.bread-top:hover,
+.bread-bottom:hover,
+.cheez:hover,
+.meat:hover,
+.capo:hover,
+.tomato:hover
+{
+  opacity: 0.5;
+}
+
+.add-cheese, 
+.add-meat,
+.add-capo,
+.add-tomato,
+.remove{
+  padding: 3px 7px 3px 7px;
+  border-radius: 15px;
+  border: none;
+  width: fit-content;
+  
+}
+
+
+.capo{
+  height: 10px;
+  border-radius: 50px;
+  background-color: rgba(172, 255, 47, 0.668);
+  padding: 3px;
+  width: 80%;
+  margin: auto;
+}
+
+button{
+  font-size: small;
+}
+
+.control-panel{
+  position: absolute;
+  top: 100%;
+  background-color: rgba(0, 0, 0, 0.753);
+  padding: 5px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  transition-duration: 0.3s;
+  background-image: linear-gradient(150deg,rgba(55, 53, 53, 0.286),rgba(0, 0, 0, 0.186),rgba(0, 0, 0, 0.091));
+}
+
+.control-panel-show{
+  transform: translateY(-100%);
+  transition-duration: 0.3s;
+}
+
+
+.price{
+  position: absolute !important;
+  padding: 15px;
+  width: 200px;
+  background-color: var(--main-color);
+  color: white;
+}
+
+
+
+/**/
+
+
+.tomato:hover .remove-btn{
+  visibility: visible;
+}
